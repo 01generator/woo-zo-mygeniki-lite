@@ -25,7 +25,10 @@ MyGeniki Lite connects WooCommerce orders to the Geniki Taxydromiki JobServicesV
 
 Lite focuses on individual-order shipment work. MyGeniki Pro adds mass printing, order-list tools, scheduled tracking, status automation, customer emails, close-day processing, automatic PDF cleanup, and secure private updates.
 
-The Pro product link will be added when its public product page is available.
+MyGeniki Pro is available from the 01generator store:
+
+- [English product page](https://01generator.com/wordpress-plugins/woocommerce-plugins/greek-woocommerce-plugins/woo-mygeniki-taxydromiki)
+- [Greek product page](https://01generator.com/el/wordpress-plugins/woocommerce-plugins/ellinika-woocommerce-plugins/woo-mygeniki-taxydromiki)
 
 ## Development
 
