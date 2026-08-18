@@ -1,0 +1,573 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR 01generator
+# This file is distributed under the same license as the MyGeniki Lite package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: MyGeniki Lite 0.1.2\n"
+"Report-Msgid-Bugs-To: https://01generator.com/\n"
+"POT-Creation-Date: 2026-08-11 10:54+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: admin\class-woo-zo-mygeniki-lite-settings.php:69
+msgid "API Password"
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-settings.php:68
+msgid "API Username"
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-admin.php:86
+msgid "Action completed."
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-settings.php:67
+msgid "Application API Key"
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-admin.php:83
+msgid "Are you sure you want to cancel this voucher?"
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-admin.php:82
+#, php-format
+msgid "Are you sure you want to cancel voucher #%s?"
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-settings.php:178
+msgid "Automatic + Manual"
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-settings.php:176
+msgid "Automatic PDF Cleanup"
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-settings.php:164
+msgid "Automatic Status Changes"
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-order-metabox.php:70
+msgid "COD"
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-ajax.php:60
+msgid "COD option saved."
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-settings.php:158
+msgid "CRON Tracking"
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-admin.php:85
+msgid "Cancel"
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-order-metabox.php:106
+msgid "Cancel Voucher"
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-settings.php:119
+msgid ""
+"Cancel a voucher remotely using the JobId returned by Geniki Taxydromiki."
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-admin.php:81
+msgid "Cancel voucher"
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-settings.php:89
+msgid "Clear Generated PDFs"
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-settings.php:134
+msgid "Close Day"
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-settings.php:137
+msgid "Close all pending voucher jobs from the Pro orders workflow."
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-order-metabox.php:88
+msgid "Comment"
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-ajax.php:63
+msgid "Comment saved."
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-settings.php:76
+msgid ""
+"Configure the single-order voucher tools and the Geniki print template used "
+"when generating labels."
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-order-metabox.php:97
+#: admin\class-woo-zo-mygeniki-lite-settings.php:110
+msgid "Create & Print Voucher"
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-settings.php:113
+msgid ""
+"Create a shipment from the order screen and open the generated PDF label in "
+"a new tab for immediate printing."
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-settings.php:62
+msgid "Credentials"
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-settings.php:170
+msgid "Customer Emails"
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-settings.php:149
+msgid ""
+"Delete all locally stored generated PDFs from the settings page whenever you "
+"want."
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-settings.php:179
+msgid ""
+"Delete old generated PDF files automatically after the number of days you "
+"configure."
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-settings.php:105
+msgid "Description"
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-settings.php:66
+msgid "Development / Test"
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-settings.php:131
+msgid ""
+"Edit COD, parcels, weight, comment and other supported carrier options "
+"inline on each order."
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-settings.php:66
+msgid "Environment"
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-settings.php:102
+msgid "Feature / Function"
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-settings.php:79
+msgid "Flyer"
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-settings.php:89
+msgid "Generated PDFs"
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-ajax.php:163
+msgid "Generated PDFs were deleted."
+msgstr ""
+
+#: includes\class-woo-zo-mygeniki-lite-geniki-adapter.php:131
+#, php-format
+msgid "Geniki Taxydromiki authentication failed: %s"
+msgstr ""
+
+#: includes\class-woo-zo-mygeniki-lite-geniki-adapter.php:436
+#, php-format
+msgid "Geniki Taxydromiki cancellation failed with result code %d."
+msgstr ""
+
+#: includes\class-woo-zo-mygeniki-lite-geniki-adapter.php:445
+#, php-format
+msgid "Geniki Taxydromiki could not cancel the voucher: %s"
+msgstr ""
+
+#: includes\class-woo-zo-mygeniki-lite-geniki-adapter.php:308
+#, php-format
+msgid "Geniki Taxydromiki could not create the voucher (result code %d)."
+msgstr ""
+
+#: includes\class-woo-zo-mygeniki-lite-geniki-adapter.php:333
+#, php-format
+msgid "Geniki Taxydromiki could not create the voucher: %s"
+msgstr ""
+
+#: includes\class-woo-zo-mygeniki-lite-geniki-adapter.php:486
+#, php-format
+msgid "Geniki Taxydromiki could not track this voucher (result code %d)."
+msgstr ""
+
+#: includes\class-woo-zo-mygeniki-lite-geniki-adapter.php:57
+msgid "Geniki Taxydromiki credentials are not configured yet."
+msgstr ""
+
+#: includes\class-woo-zo-mygeniki-lite-geniki-adapter.php:524
+msgid "Geniki Taxydromiki did not return a tracking status for this voucher."
+msgstr ""
+
+#: includes\class-woo-zo-mygeniki-lite-geniki-adapter.php:314
+msgid "Geniki Taxydromiki did not return a voucher number."
+msgstr ""
+
+#: includes\class-woo-zo-mygeniki-lite-geniki-adapter.php:479
+msgid "Geniki Taxydromiki did not return tracking data for this voucher."
+msgstr ""
+
+#: includes\class-woo-zo-mygeniki-lite-geniki-adapter.php:120
+#, php-format
+msgid ""
+"Geniki Taxydromiki rejected the configured credentials (result code %d)."
+msgstr ""
+
+#: includes\class-woo-zo-mygeniki-lite-geniki-adapter.php:379
+msgid "Geniki Taxydromiki rejected the voucher PDF request."
+msgstr ""
+
+#: includes\class-woo-zo-mygeniki-lite-geniki-adapter.php:384
+msgid "Geniki Taxydromiki returned invalid PDF data."
+msgstr ""
+
+#: includes\class-woo-zo-mygeniki-lite-geniki-adapter.php:550
+#, php-format
+msgid "Geniki Taxydromiki tracking failed: %s"
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-settings.php:66
+msgid ""
+"Geniki provides separate credentials for the test and production "
+"environments. Update the credentials when switching environments."
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-settings.php:103
+msgid "Lite"
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-settings.php:95
+msgid "Lite vs Pro"
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-settings.php:86
+msgid ""
+"Manage the locally generated voucher PDFs stored in the WordPress uploads "
+"folder."
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-settings.php:146
+msgid "Manual PDF Cleanup"
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-settings.php:122
+msgid "Manual Tracking"
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-settings.php:177
+msgid "Manual only"
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-settings.php:152
+msgid "Mass Printing"
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-admin.php:99
+#: admin\class-woo-zo-mygeniki-lite-admin.php:100
+#: admin\class-woo-zo-mygeniki-lite-admin.php:115
+#: admin\class-woo-zo-mygeniki-lite-settings.php:51
+#: admin\class-woo-zo-mygeniki-lite-settings.php:53
+msgid "MyGeniki Lite"
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-settings.php:135
+#: admin\class-woo-zo-mygeniki-lite-settings.php:153
+#: admin\class-woo-zo-mygeniki-lite-settings.php:159
+#: admin\class-woo-zo-mygeniki-lite-settings.php:165
+#: admin\class-woo-zo-mygeniki-lite-settings.php:171
+msgid "No"
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-ajax.php:56
+msgid "Nothing was saved."
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-settings.php:128
+msgid "Order Page Shipment Options"
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-order-metabox.php:39
+msgid "Order context could not be resolved."
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-settings.php:85
+msgid "PDF Settings"
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-order-metabox.php:74
+msgid "Parcels"
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-ajax.php:61
+msgid "Parcels saved."
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-ajax.php:36
+msgid "Permission denied."
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-settings.php:79
+msgid "Print Format"
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-settings.php:140
+msgid "Print Template Choice"
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-settings.php:155
+msgid ""
+"Print multiple selected orders in batches and generate one final merged PDF "
+"file."
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-settings.php:104
+msgid "Pro"
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-order-metabox.php:123
+msgid "Processing request..."
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-settings.php:66
+msgid "Production"
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-order-metabox.php:84
+msgid "Reception Delivery"
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-ajax.php:65
+msgid "Reception delivery option saved."
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-order-metabox.php:54
+msgid "Reference"
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-settings.php:116
+msgid "Remote Voucher Cancellation"
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-settings.php:125
+msgid ""
+"Request and store the latest carrier tracking message manually from the "
+"order page."
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-admin.php:87
+msgid "Request failed."
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-settings.php:161
+msgid ""
+"Run scheduled tracking updates through a tokenized endpoint and optional "
+"server cron job."
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-order-metabox.php:83
+msgid "Saturday Delivery"
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-ajax.php:64
+msgid "Saturday delivery option saved."
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-settings.php:195
+msgid "Save Settings"
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-ajax.php:68
+msgid "Saved."
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-settings.php:143
+msgid "Select Sticker, Flyer, or Sticker F6 output from the plugin settings."
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-settings.php:173
+msgid ""
+"Send in-transit and thank-you emails using WooCommerce email classes and "
+"automation rules."
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-admin.php:137
+msgid "Settings"
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-settings.php:41
+msgid "Settings saved."
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-settings.php:54
+msgid ""
+"Single-order shipment workflow for WooCommerce with a clean upgrade path to "
+"the full Pro feature set."
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-settings.php:79
+msgid "Sticker"
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-settings.php:79
+msgid "Sticker F6"
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-settings.php:63
+msgid ""
+"Store the Geniki Taxydromiki SOAP credentials required to create, print, and "
+"track vouchers."
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-settings.php:89
+#, php-format
+msgid "Stored files: %d"
+msgstr ""
+
+#: includes\class-woo-zo-mygeniki-lite-geniki-adapter.php:414
+msgid "The Geniki JobId required for cancellation is missing."
+msgstr ""
+
+#: includes\class-woo-zo-mygeniki-lite-geniki-adapter.php:62
+msgid "The Geniki Taxydromiki service definition is missing."
+msgstr ""
+
+#: includes\class-woo-zo-mygeniki-lite-geniki-adapter.php:319
+msgid "The Geniki cancellation JobId could not be saved."
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-settings.php:96
+msgid ""
+"The Lite version already covers the single-order workflow. Use this table to "
+"see exactly what expands in Pro."
+msgstr ""
+
+#: includes\class-woo-zo-mygeniki-lite-geniki-adapter.php:52
+msgid ""
+"The PHP SOAP extension is required to communicate with Geniki Taxydromiki."
+msgstr ""
+
+#: includes\class-woo-zo-mygeniki-lite-geniki-adapter.php:191
+msgid "The order could not be loaded."
+msgstr ""
+
+#: includes\class-woo-zo-mygeniki-lite-geniki-adapter.php:211
+msgid ""
+"The order is missing recipient name, address, city, postcode, or telephone."
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-ajax.php:101
+msgid "The voucher PDF could not be generated."
+msgstr ""
+
+#: includes\class-woo-zo-mygeniki-lite-geniki-adapter.php:392
+msgid "The voucher PDF could not be saved."
+msgstr ""
+
+#: includes\class-woo-zo-mygeniki-lite-geniki-adapter.php:407
+msgid "There is no voucher to cancel."
+msgstr ""
+
+#: includes\class-woo-zo-mygeniki-lite-geniki-adapter.php:348
+msgid "There is no voucher to print."
+msgstr ""
+
+#: includes\class-woo-zo-mygeniki-lite-geniki-adapter.php:459
+msgid "There is no voucher to track."
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-order-metabox.php:102
+msgid "Track Voucher"
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-order-metabox.php:64
+msgid "Tracking Status"
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-settings.php:167
+msgid ""
+"Update WooCommerce order statuses automatically when shipments are created, "
+"delivered, or marked late."
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-order-metabox.php:114
+#: admin\class-woo-zo-mygeniki-lite-settings.php:186
+msgid ""
+"Upgrade now and send automated email with the voucher number. Track your "
+"orders via CRON and mass print multiple vouchers in a few clicks."
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-settings.php:67
+msgid "Use the web-service application key supplied by Geniki Taxydromiki."
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-settings.php:75
+msgid "Voucher Settings"
+msgstr ""
+
+#: includes\class-woo-zo-mygeniki-lite-geniki-adapter.php:440
+msgid "Voucher canceled successfully."
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-ajax.php:127
+msgid "Voucher canceled."
+msgstr ""
+
+#: includes\class-woo-zo-mygeniki-lite-geniki-adapter.php:327
+msgid "Voucher created successfully."
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-ajax.php:105
+msgid "Voucher created."
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-ajax.php:105
+msgid "Voucher reprinted."
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-order-metabox.php:78
+msgid "Weight"
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-ajax.php:62
+msgid "Weight saved."
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-admin.php:84
+#: admin\class-woo-zo-mygeniki-lite-settings.php:111
+#: admin\class-woo-zo-mygeniki-lite-settings.php:112
+#: admin\class-woo-zo-mygeniki-lite-settings.php:117
+#: admin\class-woo-zo-mygeniki-lite-settings.php:118
+#: admin\class-woo-zo-mygeniki-lite-settings.php:123
+#: admin\class-woo-zo-mygeniki-lite-settings.php:124
+#: admin\class-woo-zo-mygeniki-lite-settings.php:129
+#: admin\class-woo-zo-mygeniki-lite-settings.php:130
+#: admin\class-woo-zo-mygeniki-lite-settings.php:136
+#: admin\class-woo-zo-mygeniki-lite-settings.php:141
+#: admin\class-woo-zo-mygeniki-lite-settings.php:142
+#: admin\class-woo-zo-mygeniki-lite-settings.php:147
+#: admin\class-woo-zo-mygeniki-lite-settings.php:148
+#: admin\class-woo-zo-mygeniki-lite-settings.php:154
+#: admin\class-woo-zo-mygeniki-lite-settings.php:160
+#: admin\class-woo-zo-mygeniki-lite-settings.php:166
+#: admin\class-woo-zo-mygeniki-lite-settings.php:172
+msgid "Yes"
+msgstr ""
+
+#: admin\class-woo-zo-mygeniki-lite-order-metabox.php:117
+#: admin\class-woo-zo-mygeniki-lite-settings.php:189
+msgid "You can find the Pro version here."
+msgstr ""
+

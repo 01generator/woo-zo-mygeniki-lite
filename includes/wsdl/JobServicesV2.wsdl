@@ -1,0 +1,3334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://voucher.taxydromiki.gr/JobServicesV2.asmx" xmlns:s1="http://voucher.taxydromiki.gr/JobServicesV2.asmx/AbstractTypes" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="http://voucher.taxydromiki.gr/JobServicesV2.asmx" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://voucher.taxydromiki.gr/JobServicesV2.asmx">
+      <s:element name="Add3rdPartyShipper">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAuthKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clientCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="vatId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Add3rdPartyShipperResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Add3rdPartyShipperResult" type="tns:Add3rdPartyShipperResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Add3rdPartyShipperResult">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MethodResult">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Shipper" type="tns:ThirdPartyShipper" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="MethodResult">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Result" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ThirdPartyShipper">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Active" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedOn" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreationUid" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateClientVoucherJob">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAuthKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clientCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="oVoucher" type="tns:Record" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Record">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="OrderId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Address" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CountryIso" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Telephone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Zip" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Destination" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Courier" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Pieces" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Weight" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Comments" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Services" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CodAmount" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="InsAmount" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="VoucherNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SubCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BelongsTo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeliverTo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReceivedDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="ContentsDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SendAndReturnRecipient" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExtraInfo" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateClientVoucherJobResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateClientVoucherJobResult" type="tns:CreateJobResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CreateJobResult">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:JobMethodResult">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Voucher" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SubVouchers" type="tns:ArrayOfRecord" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="JobMethodResult">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MethodResult">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="JobId" type="s:long" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfRecord">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Record" nillable="true" type="tns:Record" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateGroupedVoucherJob">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAuthKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="oVoucher" type="tns:Record" />
+            <s:element minOccurs="0" maxOccurs="1" name="groupedVoucherNumbers" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateGroupedVoucherJobResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateGroupedVoucherJobResult" type="tns:CreateGroupedVoucherJobResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CreateGroupedVoucherJobResult">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:JobMethodResult">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Voucher" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="GroupedVouchers" type="tns:ArrayOfGroupingRecord" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfGroupingRecord">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="GroupingRecord" nillable="true" type="tns:GroupingRecord" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GroupingRecord">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Voucher" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GroupingVoucher" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GroupingShop" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="JobId" type="s:long" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateReturnRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAuthKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="oReturnRecord" type="tns:ReturnRecord" />
+            <s:element minOccurs="1" maxOccurs="1" name="nDaysValid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sRecipientId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="bPayedBySender" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ReturnRecord">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Address" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Telephone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Zip" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Pieces" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Weight" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Comments" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderId" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateReturnRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateReturnRequestResult" type="tns:CreateReturnRequestResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CreateReturnRequestResult">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MethodResult">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ReturnSerial" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ReturnFrom" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ReturnType" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Recipient" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="DaysValid" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsPayedBySender" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CreatedOn" type="s:dateTime" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="CreateVoucherReturnRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAuthKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sVoucherNumber" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="nDaysValid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sRecipientId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="bPayedBySender" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateVoucherReturnRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateVoucherReturnRequestResult" type="tns:CreateReturnRequestResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateReturnRequestParams">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAuthKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sReturnSerial" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="nDaysValid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sRecipientId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="bPayedBySender" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateReturnRequestParamsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateReturnRequestParamsResult" type="tns:CreateReturnRequestResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReturnRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAuthKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="returnSerial" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReturnRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetReturnRequestResult" type="tns:GetReturnRequestResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetReturnRequestResult">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MethodResult">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ReturnSerial" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ReturnFrom" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ReturnType" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Recipient" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="DaysValid" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsPayedBySender" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CreatedOn" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="ReturningVoucher" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="ReturnedOn" nillable="true" type="s:dateTime" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetReturnRequestOfVoucher">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAuthKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sVoucherNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReturnRequestOfVoucherResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetReturnRequestOfVoucherResult" type="tns:GetReturnRequestResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReturnRequestPdf">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="authKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="returnSerial" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReturnRequestPdfResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetReturnRequestsPdf">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="authKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="returnSerials" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReturnRequestsPdfResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="TrackDeliveryStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="authKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="voucherNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="language" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TrackDeliveryStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TrackDeliveryStatusResult" type="tns:TrackDeliveryStatusResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TrackDeliveryStatusResult">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MethodResult">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ShopCode" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="DeliveryDate" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="Consignee" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ReturningServiceVoucher" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="DeliveredAt" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetVoucherZPL">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="authKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="voucherNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="format" type="tns:MediaFormatZPL" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="MediaFormatZPL">
+        <s:restriction base="s:string">
+          <s:enumeration value="Sticker1015" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GetVoucherZPLResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="CreateCODRelease">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="authKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="voucherNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="codAmount" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateCODReleaseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateCODReleaseResult" type="tns:CreateCODReleaseResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CreateCODReleaseResult">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MethodResult">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="VoucherNo" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="CodAmount" type="s:decimal" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="Create3rdPartyShipper">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAuthKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="shipperDetails" type="tns:ThirdPartyShipperDetails" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ThirdPartyShipperDetails">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="VatId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Address" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Telephone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Zip" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServicePointCode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Create3rdPartyShipperResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Create3rdPartyShipperResult" type="tns:Create3rdPartyShipperResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Create3rdPartyShipperResult">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MethodResult">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Shipper" type="tns:ThirdPartyShipper" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="Get3rdPartyShipper">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAuthKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="creationUid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get3rdPartyShipperResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get3rdPartyShipperResult" type="tns:Get3rdPartyShipperResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Get3rdPartyShipperResult">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MethodResult">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Shipper" type="tns:ThirdPartyShipper" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="CreateVoucherPickupOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="authKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="voucherNumber" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pickupDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="dayQuarter" type="tns:DayQuarter" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="DayQuarter">
+        <s:restriction base="s:string">
+          <s:enumeration value="Morning" />
+          <s:enumeration value="LateMorning" />
+          <s:enumeration value="Afternoon" />
+          <s:enumeration value="Evening" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="CreateVoucherPickupOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateVoucherPickupOrderResult" type="tns:CreateVoucherPickupOrderResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CreateVoucherPickupOrderResult">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MethodResult">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Order" type="tns:VoucherPickupOrder" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="VoucherPickupOrder">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="VoucherNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UniqueID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsActive" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PickupDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DayQuarter" type="tns:DayQuarter" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsFinalized" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="FinalizedAt" nillable="true" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetVoucherPickupOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="authKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="voucherNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVoucherPickupOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetVoucherPickupOrderResult" type="tns:GetVoucherPickupOrderResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetVoucherPickupOrderResult">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MethodResult">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Order" type="tns:VoucherPickupOrder" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="UpdateVoucherPickupOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="authKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="voucherNumber" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pickupDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="dayQuarter" type="tns:DayQuarter" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateVoucherPickupOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateVoucherPickupOrderResult" type="tns:UpdateVoucherPickupOrderResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="UpdateVoucherPickupOrderResult">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MethodResult">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Order" type="tns:VoucherPickupOrder" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="CancelVoucherPickupOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="authKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="voucherNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelVoucherPickupOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CancelVoucherPickupOrderResult" type="tns:CancelVoucherPickupOrderResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CancelVoucherPickupOrderResult">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MethodResult">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Order" type="tns:VoucherPickupOrder" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetPickupJobStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="authKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="jobId" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPickupJobStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPickupJobStatusResult" type="tns:GetPickupJobStatusResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetPickupJobStatusResult">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MethodResult">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Vouchers" type="tns:ArrayOfString" />
+              <s:element minOccurs="1" maxOccurs="1" name="JobId" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="StatusDate" type="s:dateTime" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="CreateVoucherReturnOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="authKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="voucherNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="reason" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateVoucherReturnOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateVoucherReturnOrderResult" type="tns:CreateVoucherReturnOrderResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CreateVoucherReturnOrderResult">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MethodResult">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Order" type="tns:VoucherReturnOrder" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="VoucherReturnOrder">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="VoucherNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UniqueID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Reason" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetVoucherReturnOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="authKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="voucherNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVoucherReturnOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetVoucherReturnOrderResult" type="tns:GetVoucherReturnOrderResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetVoucherReturnOrderResult">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MethodResult">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Order" type="tns:VoucherReturnOrder" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="CreateAffiliateTrackingPair">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="authKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="voucherNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="trackingId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateAffiliateTrackingPairResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateAffiliateTrackingPairResult" type="tns:AffiliateTrackingPairResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AffiliateTrackingPairResult">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MethodResult">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Pair" type="tns:AffiliateTrackingPair" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="AffiliateTrackingPair">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="TrackingId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Voucher" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="InsertedAt" nillable="true" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetAffiliateTrackingPair">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="authKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="code" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAffiliateTrackingPairResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAffiliateTrackingPairResult" type="tns:AffiliateTrackingPairResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLockersList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="authKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLockersListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLockersListResult" type="tns:GetLockersListResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetLockersListResult">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MethodResult">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Lockers" type="tns:ArrayOfLockerInfo" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfLockerInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="LockerInfo" nillable="true" type="tns:LockerInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="LockerInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Id" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Vendor" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Address" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Region" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Longitude" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Latitude" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Authenticate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUsrName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sUsrPwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="applicationKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthenticateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthenticateResult" type="tns:AuthenticateResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AuthenticateResult">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MethodResult">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Key" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="CreateJob">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAuthKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="oVoucher" type="tns:Record" />
+            <s:element minOccurs="1" maxOccurs="1" name="eType" type="tns:JobType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="JobType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Voucher" />
+          <s:enumeration value="Pickup" />
+          <s:enumeration value="SendAndReturn" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="CreateJobResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateJobResult" type="tns:CreateJobResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddJobReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAuthKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="nJobId" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="sOrderId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddJobReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddJobReportResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVoucherJob">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAuthKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="nJobId" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVoucherJobResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetVoucherJobResult" type="tns:GetVoucherJobResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetVoucherJobResult">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:JobMethodResult">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Job" type="tns:VoucherJob" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="VoucherJob">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseJob">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Voucher" type="tns:Record" />
+              <s:element minOccurs="0" maxOccurs="1" name="ReturningVoucher" type="tns:Record" />
+              <s:element minOccurs="0" maxOccurs="1" name="SubVouchers" type="tns:ArrayOfRecord" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BaseJob">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="Type" type="tns:JobType" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderId" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Date" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="User" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsClosed" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsCanceled" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="StatusDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ClosingBatch" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ClosePendingJobs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAuthKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ClosePendingJobsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ClosePendingJobsResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ClosePendingJobsByDate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAuthKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dFr" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="dTo" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ClosePendingJobsByDateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ClosePendingJobsByDateResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelJob">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAuthKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="nJobId" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="bCancel" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelJobResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CancelJobResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelAndCloseJob">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="authKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="jobId" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelAndCloseJobResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CancelAndCloseJobResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetJobsFromOrderId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAuthKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sOrderId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetJobsFromOrderIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetJobsFromOrderIdResult" type="tns:GetJobsResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetJobsResult">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MethodResult">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Jobs" type="tns:ArrayOfVoucherJob" />
+              <s:element minOccurs="1" maxOccurs="1" name="Count" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfVoucherJob">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="VoucherJob" nillable="true" type="tns:VoucherJob" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetJobs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAuthKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="oParams" type="tns:QueryParameters" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="QueryParameters">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="DateFrom" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateTo" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="VoucherNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConsigneeName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="State" type="tns:VoucherState" />
+          <s:element minOccurs="1" maxOccurs="1" name="CounType" type="tns:CountType" />
+          <s:element minOccurs="1" maxOccurs="1" name="SearchType" type="tns:SearchType" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="VoucherState">
+        <s:restriction base="s:string">
+          <s:enumeration value="All" />
+          <s:enumeration value="Open" />
+          <s:enumeration value="Closed" />
+          <s:enumeration value="ClosedActive" />
+          <s:enumeration value="ClosedCanceled" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="CountType">
+        <s:restriction base="s:string">
+          <s:enumeration value="None" />
+          <s:enumeration value="JobsOnly" />
+          <s:enumeration value="All" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="SearchType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Any" />
+          <s:enumeration value="Vouchers" />
+          <s:enumeration value="Orders" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GetJobsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetJobsResult" type="tns:GetJobsResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TrackAndTrace">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="authKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="voucherNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="language" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TrackAndTraceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TrackAndTraceResult" type="tns:TrackAndTraceResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TrackAndTraceResult">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MethodResult">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Checkpoints" type="tns:ArrayOfCheckpoint" />
+              <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="DeliveryDate" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="Consignee" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ReturningServiceVoucher" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="DeliveredAt" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfCheckpoint">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Checkpoint" nillable="true" type="tns:Checkpoint" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Checkpoint">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="StatusDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Shop" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Latitude" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Longitude" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ChangePassword">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="authKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangePasswordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ChangePasswordResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVoucherPdf">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="authKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="voucherNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="format" type="tns:MediaFormat" />
+            <s:element minOccurs="1" maxOccurs="1" name="extraInfoFormat" type="tns:ExtraInfoFormat" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="MediaFormat">
+        <s:restriction base="s:string">
+          <s:enumeration value="Sticker" />
+          <s:enumeration value="Flyer" />
+          <s:enumeration value="StickerF6" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="ExtraInfoFormat">
+        <s:restriction base="s:string">
+          <s:enumeration value="None" />
+          <s:enumeration value="ThreeW" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GetVoucherPdfResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetVouchersPdf">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="authKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="voucherNumbers" type="tns:ArrayOfString" />
+            <s:element minOccurs="1" maxOccurs="1" name="format" type="tns:MediaFormat" />
+            <s:element minOccurs="1" maxOccurs="1" name="extraInfoFormat" type="tns:ExtraInfoFormat" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVouchersPdfResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AddExtraInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="authKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="jobId" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="extraInfo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="extraInfoFormat" type="tns:ExtraInfoFormat" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddExtraInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddExtraInfoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetShopsList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="authKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetShopsListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetShopsListResult" type="tns:GetShopsResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetShopsResult">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MethodResult">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Shops" type="tns:ArrayOfShop" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfShop">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Shop" nillable="true" type="tns:Shop" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Shop">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Code2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Address" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Telephone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Zip" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Longitude" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Latitude" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="SubShop" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Active" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="WorkingHours" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CalculateCost">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="authKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="routeId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="weight" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="services" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalculateCostResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CalculateCostResult" type="tns:CalculateCostResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CalculateCostResult">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MethodResult">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Cost" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="Vat" type="s:decimal" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="CalculateDay">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="authKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="regionFromId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="regionToId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="receivedOn" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="shipmentType" type="tns:ShipmentType" />
+            <s:element minOccurs="1" maxOccurs="1" name="deliverOnSaturday" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="ShipmentType">
+        <s:restriction base="s:string">
+          <s:enumeration value="MailOrPackageLess2Kg" />
+          <s:enumeration value="PackageMore2Kg" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="CalculateDayResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CalculateDayResult" type="tns:CalculateDayResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CalculateDayResult">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MethodResult">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="MinDays" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="MaxDays" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="Helper">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="paramName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="parameters" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfAnyType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="anyType" nillable="true" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="HelperResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelperResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Echo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="value" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EchoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EchoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Add3rdPartyShipperResult" nillable="true" type="tns:Add3rdPartyShipperResult" />
+      <s:element name="CreateReturnRequestResult" nillable="true" type="tns:CreateReturnRequestResult" />
+      <s:element name="GetReturnRequestResult" nillable="true" type="tns:GetReturnRequestResult" />
+      <s:element name="TrackDeliveryStatusResult" nillable="true" type="tns:TrackDeliveryStatusResult" />
+      <s:element name="CreateCODReleaseResult" nillable="true" type="tns:CreateCODReleaseResult" />
+      <s:element name="Get3rdPartyShipperResult" nillable="true" type="tns:Get3rdPartyShipperResult" />
+      <s:element name="CreateVoucherPickupOrderResult" nillable="true" type="tns:CreateVoucherPickupOrderResult" />
+      <s:element name="GetVoucherPickupOrderResult" nillable="true" type="tns:GetVoucherPickupOrderResult" />
+      <s:element name="UpdateVoucherPickupOrderResult" nillable="true" type="tns:UpdateVoucherPickupOrderResult" />
+      <s:element name="CancelVoucherPickupOrderResult" nillable="true" type="tns:CancelVoucherPickupOrderResult" />
+      <s:element name="GetPickupJobStatusResult" nillable="true" type="tns:GetPickupJobStatusResult" />
+      <s:element name="CreateVoucherReturnOrderResult" nillable="true" type="tns:CreateVoucherReturnOrderResult" />
+      <s:element name="GetVoucherReturnOrderResult" nillable="true" type="tns:GetVoucherReturnOrderResult" />
+      <s:element name="AffiliateTrackingPairResult" nillable="true" type="tns:AffiliateTrackingPairResult" />
+      <s:element name="GetLockersListResult" nillable="true" type="tns:GetLockersListResult" />
+      <s:element name="AuthenticateResult" nillable="true" type="tns:AuthenticateResult" />
+      <s:element name="int" type="s:int" />
+      <s:element name="GetVoucherJobResult" nillable="true" type="tns:GetVoucherJobResult" />
+      <s:element name="GetJobsResult" nillable="true" type="tns:GetJobsResult" />
+      <s:element name="TrackAndTraceResult" nillable="true" type="tns:TrackAndTraceResult" />
+      <s:element name="GetShopsResult" nillable="true" type="tns:GetShopsResult" />
+      <s:element name="CalculateCostResult" nillable="true" type="tns:CalculateCostResult" />
+      <s:element name="CalculateDayResult" nillable="true" type="tns:CalculateDayResult" />
+    </s:schema>
+    <s:schema targetNamespace="http://voucher.taxydromiki.gr/JobServicesV2.asmx/AbstractTypes">
+      <s:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <s:complexType name="StringArray">
+        <s:complexContent mixed="false">
+          <s:restriction base="soapenc:Array">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="unbounded" name="String" type="s:string" />
+            </s:sequence>
+          </s:restriction>
+        </s:complexContent>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="Add3rdPartyShipperSoapIn">
+    <wsdl:part name="parameters" element="tns:Add3rdPartyShipper" />
+  </wsdl:message>
+  <wsdl:message name="Add3rdPartyShipperSoapOut">
+    <wsdl:part name="parameters" element="tns:Add3rdPartyShipperResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateClientVoucherJobSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateClientVoucherJob" />
+  </wsdl:message>
+  <wsdl:message name="CreateClientVoucherJobSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateClientVoucherJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateGroupedVoucherJobSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateGroupedVoucherJob" />
+  </wsdl:message>
+  <wsdl:message name="CreateGroupedVoucherJobSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateGroupedVoucherJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateReturnRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateReturnRequest" />
+  </wsdl:message>
+  <wsdl:message name="CreateReturnRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateReturnRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateVoucherReturnRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateVoucherReturnRequest" />
+  </wsdl:message>
+  <wsdl:message name="CreateVoucherReturnRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateVoucherReturnRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateReturnRequestParamsSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateReturnRequestParams" />
+  </wsdl:message>
+  <wsdl:message name="UpdateReturnRequestParamsSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateReturnRequestParamsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetReturnRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:GetReturnRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetReturnRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:GetReturnRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetReturnRequestOfVoucherSoapIn">
+    <wsdl:part name="parameters" element="tns:GetReturnRequestOfVoucher" />
+  </wsdl:message>
+  <wsdl:message name="GetReturnRequestOfVoucherSoapOut">
+    <wsdl:part name="parameters" element="tns:GetReturnRequestOfVoucherResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetReturnRequestPdfSoapIn">
+    <wsdl:part name="parameters" element="tns:GetReturnRequestPdf" />
+  </wsdl:message>
+  <wsdl:message name="GetReturnRequestPdfSoapOut">
+    <wsdl:part name="parameters" element="tns:GetReturnRequestPdfResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetReturnRequestsPdfSoapIn">
+    <wsdl:part name="parameters" element="tns:GetReturnRequestsPdf" />
+  </wsdl:message>
+  <wsdl:message name="GetReturnRequestsPdfSoapOut">
+    <wsdl:part name="parameters" element="tns:GetReturnRequestsPdfResponse" />
+  </wsdl:message>
+  <wsdl:message name="TrackDeliveryStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:TrackDeliveryStatus" />
+  </wsdl:message>
+  <wsdl:message name="TrackDeliveryStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:TrackDeliveryStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetVoucherZPLSoapIn">
+    <wsdl:part name="parameters" element="tns:GetVoucherZPL" />
+  </wsdl:message>
+  <wsdl:message name="GetVoucherZPLSoapOut">
+    <wsdl:part name="parameters" element="tns:GetVoucherZPLResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateCODReleaseSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateCODRelease" />
+  </wsdl:message>
+  <wsdl:message name="CreateCODReleaseSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateCODReleaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="Create3rdPartyShipperSoapIn">
+    <wsdl:part name="parameters" element="tns:Create3rdPartyShipper" />
+  </wsdl:message>
+  <wsdl:message name="Create3rdPartyShipperSoapOut">
+    <wsdl:part name="parameters" element="tns:Create3rdPartyShipperResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get3rdPartyShipperSoapIn">
+    <wsdl:part name="parameters" element="tns:Get3rdPartyShipper" />
+  </wsdl:message>
+  <wsdl:message name="Get3rdPartyShipperSoapOut">
+    <wsdl:part name="parameters" element="tns:Get3rdPartyShipperResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateVoucherPickupOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateVoucherPickupOrder" />
+  </wsdl:message>
+  <wsdl:message name="CreateVoucherPickupOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateVoucherPickupOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetVoucherPickupOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:GetVoucherPickupOrder" />
+  </wsdl:message>
+  <wsdl:message name="GetVoucherPickupOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:GetVoucherPickupOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateVoucherPickupOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateVoucherPickupOrder" />
+  </wsdl:message>
+  <wsdl:message name="UpdateVoucherPickupOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateVoucherPickupOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="CancelVoucherPickupOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:CancelVoucherPickupOrder" />
+  </wsdl:message>
+  <wsdl:message name="CancelVoucherPickupOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:CancelVoucherPickupOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPickupJobStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPickupJobStatus" />
+  </wsdl:message>
+  <wsdl:message name="GetPickupJobStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPickupJobStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateVoucherReturnOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateVoucherReturnOrder" />
+  </wsdl:message>
+  <wsdl:message name="CreateVoucherReturnOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateVoucherReturnOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetVoucherReturnOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:GetVoucherReturnOrder" />
+  </wsdl:message>
+  <wsdl:message name="GetVoucherReturnOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:GetVoucherReturnOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateAffiliateTrackingPairSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateAffiliateTrackingPair" />
+  </wsdl:message>
+  <wsdl:message name="CreateAffiliateTrackingPairSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateAffiliateTrackingPairResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAffiliateTrackingPairSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAffiliateTrackingPair" />
+  </wsdl:message>
+  <wsdl:message name="GetAffiliateTrackingPairSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAffiliateTrackingPairResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLockersListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLockersList" />
+  </wsdl:message>
+  <wsdl:message name="GetLockersListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLockersListResponse" />
+  </wsdl:message>
+  <wsdl:message name="AuthenticateSoapIn">
+    <wsdl:part name="parameters" element="tns:Authenticate" />
+  </wsdl:message>
+  <wsdl:message name="AuthenticateSoapOut">
+    <wsdl:part name="parameters" element="tns:AuthenticateResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateJobSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateJob" />
+  </wsdl:message>
+  <wsdl:message name="CreateJobSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddJobReportSoapIn">
+    <wsdl:part name="parameters" element="tns:AddJobReport" />
+  </wsdl:message>
+  <wsdl:message name="AddJobReportSoapOut">
+    <wsdl:part name="parameters" element="tns:AddJobReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetVoucherJobSoapIn">
+    <wsdl:part name="parameters" element="tns:GetVoucherJob" />
+  </wsdl:message>
+  <wsdl:message name="GetVoucherJobSoapOut">
+    <wsdl:part name="parameters" element="tns:GetVoucherJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="ClosePendingJobsSoapIn">
+    <wsdl:part name="parameters" element="tns:ClosePendingJobs" />
+  </wsdl:message>
+  <wsdl:message name="ClosePendingJobsSoapOut">
+    <wsdl:part name="parameters" element="tns:ClosePendingJobsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ClosePendingJobsByDateSoapIn">
+    <wsdl:part name="parameters" element="tns:ClosePendingJobsByDate" />
+  </wsdl:message>
+  <wsdl:message name="ClosePendingJobsByDateSoapOut">
+    <wsdl:part name="parameters" element="tns:ClosePendingJobsByDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="CancelJobSoapIn">
+    <wsdl:part name="parameters" element="tns:CancelJob" />
+  </wsdl:message>
+  <wsdl:message name="CancelJobSoapOut">
+    <wsdl:part name="parameters" element="tns:CancelJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="CancelAndCloseJobSoapIn">
+    <wsdl:part name="parameters" element="tns:CancelAndCloseJob" />
+  </wsdl:message>
+  <wsdl:message name="CancelAndCloseJobSoapOut">
+    <wsdl:part name="parameters" element="tns:CancelAndCloseJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetJobsFromOrderIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetJobsFromOrderId" />
+  </wsdl:message>
+  <wsdl:message name="GetJobsFromOrderIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetJobsFromOrderIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetJobsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetJobs" />
+  </wsdl:message>
+  <wsdl:message name="GetJobsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetJobsResponse" />
+  </wsdl:message>
+  <wsdl:message name="TrackAndTraceSoapIn">
+    <wsdl:part name="parameters" element="tns:TrackAndTrace" />
+  </wsdl:message>
+  <wsdl:message name="TrackAndTraceSoapOut">
+    <wsdl:part name="parameters" element="tns:TrackAndTraceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordSoapIn">
+    <wsdl:part name="parameters" element="tns:ChangePassword" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordSoapOut">
+    <wsdl:part name="parameters" element="tns:ChangePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetVoucherPdfSoapIn">
+    <wsdl:part name="parameters" element="tns:GetVoucherPdf" />
+  </wsdl:message>
+  <wsdl:message name="GetVoucherPdfSoapOut">
+    <wsdl:part name="parameters" element="tns:GetVoucherPdfResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetVouchersPdfSoapIn">
+    <wsdl:part name="parameters" element="tns:GetVouchersPdf" />
+  </wsdl:message>
+  <wsdl:message name="GetVouchersPdfSoapOut">
+    <wsdl:part name="parameters" element="tns:GetVouchersPdfResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddExtraInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:AddExtraInfo" />
+  </wsdl:message>
+  <wsdl:message name="AddExtraInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:AddExtraInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetShopsListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetShopsList" />
+  </wsdl:message>
+  <wsdl:message name="GetShopsListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetShopsListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CalculateCostSoapIn">
+    <wsdl:part name="parameters" element="tns:CalculateCost" />
+  </wsdl:message>
+  <wsdl:message name="CalculateCostSoapOut">
+    <wsdl:part name="parameters" element="tns:CalculateCostResponse" />
+  </wsdl:message>
+  <wsdl:message name="CalculateDaySoapIn">
+    <wsdl:part name="parameters" element="tns:CalculateDay" />
+  </wsdl:message>
+  <wsdl:message name="CalculateDaySoapOut">
+    <wsdl:part name="parameters" element="tns:CalculateDayResponse" />
+  </wsdl:message>
+  <wsdl:message name="HelperSoapIn">
+    <wsdl:part name="parameters" element="tns:Helper" />
+  </wsdl:message>
+  <wsdl:message name="HelperSoapOut">
+    <wsdl:part name="parameters" element="tns:HelperResponse" />
+  </wsdl:message>
+  <wsdl:message name="EchoSoapIn">
+    <wsdl:part name="parameters" element="tns:Echo" />
+  </wsdl:message>
+  <wsdl:message name="EchoSoapOut">
+    <wsdl:part name="parameters" element="tns:EchoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Add3rdPartyShipperHttpGetIn">
+    <wsdl:part name="sAuthKey" type="s:string" />
+    <wsdl:part name="clientCode" type="s:string" />
+    <wsdl:part name="vatId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Add3rdPartyShipperHttpGetOut">
+    <wsdl:part name="Body" element="tns:Add3rdPartyShipperResult" />
+  </wsdl:message>
+  <wsdl:message name="CreateVoucherReturnRequestHttpGetIn">
+    <wsdl:part name="sAuthKey" type="s:string" />
+    <wsdl:part name="sVoucherNumber" type="s:string" />
+    <wsdl:part name="nDaysValid" type="s:string" />
+    <wsdl:part name="sRecipientId" type="s:string" />
+    <wsdl:part name="bPayedBySender" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateVoucherReturnRequestHttpGetOut">
+    <wsdl:part name="Body" element="tns:CreateReturnRequestResult" />
+  </wsdl:message>
+  <wsdl:message name="UpdateReturnRequestParamsHttpGetIn">
+    <wsdl:part name="sAuthKey" type="s:string" />
+    <wsdl:part name="sReturnSerial" type="s:string" />
+    <wsdl:part name="nDaysValid" type="s:string" />
+    <wsdl:part name="sRecipientId" type="s:string" />
+    <wsdl:part name="bPayedBySender" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateReturnRequestParamsHttpGetOut">
+    <wsdl:part name="Body" element="tns:CreateReturnRequestResult" />
+  </wsdl:message>
+  <wsdl:message name="GetReturnRequestHttpGetIn">
+    <wsdl:part name="sAuthKey" type="s:string" />
+    <wsdl:part name="returnSerial" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetReturnRequestHttpGetOut">
+    <wsdl:part name="Body" element="tns:GetReturnRequestResult" />
+  </wsdl:message>
+  <wsdl:message name="GetReturnRequestOfVoucherHttpGetIn">
+    <wsdl:part name="sAuthKey" type="s:string" />
+    <wsdl:part name="sVoucherNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetReturnRequestOfVoucherHttpGetOut">
+    <wsdl:part name="Body" element="tns:GetReturnRequestResult" />
+  </wsdl:message>
+  <wsdl:message name="GetReturnRequestPdfHttpGetIn">
+    <wsdl:part name="authKey" type="s:string" />
+    <wsdl:part name="returnSerial" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetReturnRequestPdfHttpGetOut" />
+  <wsdl:message name="GetReturnRequestsPdfHttpGetIn">
+    <wsdl:part name="authKey" type="s:string" />
+    <wsdl:part name="returnSerials" type="s1:StringArray" />
+  </wsdl:message>
+  <wsdl:message name="GetReturnRequestsPdfHttpGetOut" />
+  <wsdl:message name="TrackDeliveryStatusHttpGetIn">
+    <wsdl:part name="authKey" type="s:string" />
+    <wsdl:part name="voucherNo" type="s:string" />
+    <wsdl:part name="language" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="TrackDeliveryStatusHttpGetOut">
+    <wsdl:part name="Body" element="tns:TrackDeliveryStatusResult" />
+  </wsdl:message>
+  <wsdl:message name="GetVoucherZPLHttpGetIn">
+    <wsdl:part name="authKey" type="s:string" />
+    <wsdl:part name="voucherNo" type="s:string" />
+    <wsdl:part name="format" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetVoucherZPLHttpGetOut" />
+  <wsdl:message name="CreateCODReleaseHttpGetIn">
+    <wsdl:part name="authKey" type="s:string" />
+    <wsdl:part name="voucherNo" type="s:string" />
+    <wsdl:part name="codAmount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateCODReleaseHttpGetOut">
+    <wsdl:part name="Body" element="tns:CreateCODReleaseResult" />
+  </wsdl:message>
+  <wsdl:message name="Get3rdPartyShipperHttpGetIn">
+    <wsdl:part name="sAuthKey" type="s:string" />
+    <wsdl:part name="creationUid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Get3rdPartyShipperHttpGetOut">
+    <wsdl:part name="Body" element="tns:Get3rdPartyShipperResult" />
+  </wsdl:message>
+  <wsdl:message name="CreateVoucherPickupOrderHttpGetIn">
+    <wsdl:part name="authKey" type="s:string" />
+    <wsdl:part name="voucherNumber" type="s:string" />
+    <wsdl:part name="pickupDate" type="s:string" />
+    <wsdl:part name="dayQuarter" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateVoucherPickupOrderHttpGetOut">
+    <wsdl:part name="Body" element="tns:CreateVoucherPickupOrderResult" />
+  </wsdl:message>
+  <wsdl:message name="GetVoucherPickupOrderHttpGetIn">
+    <wsdl:part name="authKey" type="s:string" />
+    <wsdl:part name="voucherNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetVoucherPickupOrderHttpGetOut">
+    <wsdl:part name="Body" element="tns:GetVoucherPickupOrderResult" />
+  </wsdl:message>
+  <wsdl:message name="UpdateVoucherPickupOrderHttpGetIn">
+    <wsdl:part name="authKey" type="s:string" />
+    <wsdl:part name="voucherNumber" type="s:string" />
+    <wsdl:part name="pickupDate" type="s:string" />
+    <wsdl:part name="dayQuarter" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateVoucherPickupOrderHttpGetOut">
+    <wsdl:part name="Body" element="tns:UpdateVoucherPickupOrderResult" />
+  </wsdl:message>
+  <wsdl:message name="CancelVoucherPickupOrderHttpGetIn">
+    <wsdl:part name="authKey" type="s:string" />
+    <wsdl:part name="voucherNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CancelVoucherPickupOrderHttpGetOut">
+    <wsdl:part name="Body" element="tns:CancelVoucherPickupOrderResult" />
+  </wsdl:message>
+  <wsdl:message name="GetPickupJobStatusHttpGetIn">
+    <wsdl:part name="authKey" type="s:string" />
+    <wsdl:part name="jobId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPickupJobStatusHttpGetOut">
+    <wsdl:part name="Body" element="tns:GetPickupJobStatusResult" />
+  </wsdl:message>
+  <wsdl:message name="CreateVoucherReturnOrderHttpGetIn">
+    <wsdl:part name="authKey" type="s:string" />
+    <wsdl:part name="voucherNumber" type="s:string" />
+    <wsdl:part name="reason" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateVoucherReturnOrderHttpGetOut">
+    <wsdl:part name="Body" element="tns:CreateVoucherReturnOrderResult" />
+  </wsdl:message>
+  <wsdl:message name="GetVoucherReturnOrderHttpGetIn">
+    <wsdl:part name="authKey" type="s:string" />
+    <wsdl:part name="voucherNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetVoucherReturnOrderHttpGetOut">
+    <wsdl:part name="Body" element="tns:GetVoucherReturnOrderResult" />
+  </wsdl:message>
+  <wsdl:message name="CreateAffiliateTrackingPairHttpGetIn">
+    <wsdl:part name="authKey" type="s:string" />
+    <wsdl:part name="voucherNumber" type="s:string" />
+    <wsdl:part name="trackingId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateAffiliateTrackingPairHttpGetOut">
+    <wsdl:part name="Body" element="tns:AffiliateTrackingPairResult" />
+  </wsdl:message>
+  <wsdl:message name="GetAffiliateTrackingPairHttpGetIn">
+    <wsdl:part name="authKey" type="s:string" />
+    <wsdl:part name="code" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAffiliateTrackingPairHttpGetOut">
+    <wsdl:part name="Body" element="tns:AffiliateTrackingPairResult" />
+  </wsdl:message>
+  <wsdl:message name="GetLockersListHttpGetIn">
+    <wsdl:part name="authKey" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLockersListHttpGetOut">
+    <wsdl:part name="Body" element="tns:GetLockersListResult" />
+  </wsdl:message>
+  <wsdl:message name="AuthenticateHttpGetIn">
+    <wsdl:part name="sUsrName" type="s:string" />
+    <wsdl:part name="sUsrPwd" type="s:string" />
+    <wsdl:part name="applicationKey" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AuthenticateHttpGetOut">
+    <wsdl:part name="Body" element="tns:AuthenticateResult" />
+  </wsdl:message>
+  <wsdl:message name="AddJobReportHttpGetIn">
+    <wsdl:part name="sAuthKey" type="s:string" />
+    <wsdl:part name="nJobId" type="s:string" />
+    <wsdl:part name="sOrderId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddJobReportHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="GetVoucherJobHttpGetIn">
+    <wsdl:part name="sAuthKey" type="s:string" />
+    <wsdl:part name="nJobId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetVoucherJobHttpGetOut">
+    <wsdl:part name="Body" element="tns:GetVoucherJobResult" />
+  </wsdl:message>
+  <wsdl:message name="ClosePendingJobsHttpGetIn">
+    <wsdl:part name="sAuthKey" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ClosePendingJobsHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="ClosePendingJobsByDateHttpGetIn">
+    <wsdl:part name="sAuthKey" type="s:string" />
+    <wsdl:part name="dFr" type="s:string" />
+    <wsdl:part name="dTo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ClosePendingJobsByDateHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="CancelJobHttpGetIn">
+    <wsdl:part name="sAuthKey" type="s:string" />
+    <wsdl:part name="nJobId" type="s:string" />
+    <wsdl:part name="bCancel" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CancelJobHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="CancelAndCloseJobHttpGetIn">
+    <wsdl:part name="authKey" type="s:string" />
+    <wsdl:part name="jobId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CancelAndCloseJobHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="GetJobsFromOrderIdHttpGetIn">
+    <wsdl:part name="sAuthKey" type="s:string" />
+    <wsdl:part name="sOrderId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetJobsFromOrderIdHttpGetOut">
+    <wsdl:part name="Body" element="tns:GetJobsResult" />
+  </wsdl:message>
+  <wsdl:message name="TrackAndTraceHttpGetIn">
+    <wsdl:part name="authKey" type="s:string" />
+    <wsdl:part name="voucherNo" type="s:string" />
+    <wsdl:part name="language" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="TrackAndTraceHttpGetOut">
+    <wsdl:part name="Body" element="tns:TrackAndTraceResult" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordHttpGetIn">
+    <wsdl:part name="authKey" type="s:string" />
+    <wsdl:part name="newPassword" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="GetVoucherPdfHttpGetIn">
+    <wsdl:part name="authKey" type="s:string" />
+    <wsdl:part name="voucherNo" type="s:string" />
+    <wsdl:part name="format" type="s:string" />
+    <wsdl:part name="extraInfoFormat" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetVoucherPdfHttpGetOut" />
+  <wsdl:message name="GetVouchersPdfHttpGetIn">
+    <wsdl:part name="authKey" type="s:string" />
+    <wsdl:part name="voucherNumbers" type="s1:StringArray" />
+    <wsdl:part name="format" type="s:string" />
+    <wsdl:part name="extraInfoFormat" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetVouchersPdfHttpGetOut" />
+  <wsdl:message name="AddExtraInfoHttpGetIn">
+    <wsdl:part name="authKey" type="s:string" />
+    <wsdl:part name="jobId" type="s:string" />
+    <wsdl:part name="extraInfo" type="s:string" />
+    <wsdl:part name="extraInfoFormat" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddExtraInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="GetShopsListHttpGetIn">
+    <wsdl:part name="authKey" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetShopsListHttpGetOut">
+    <wsdl:part name="Body" element="tns:GetShopsResult" />
+  </wsdl:message>
+  <wsdl:message name="CalculateCostHttpGetIn">
+    <wsdl:part name="authKey" type="s:string" />
+    <wsdl:part name="routeId" type="s:string" />
+    <wsdl:part name="weight" type="s:string" />
+    <wsdl:part name="services" type="s1:StringArray" />
+  </wsdl:message>
+  <wsdl:message name="CalculateCostHttpGetOut">
+    <wsdl:part name="Body" element="tns:CalculateCostResult" />
+  </wsdl:message>
+  <wsdl:message name="CalculateDayHttpGetIn">
+    <wsdl:part name="authKey" type="s:string" />
+    <wsdl:part name="regionFromId" type="s:string" />
+    <wsdl:part name="regionToId" type="s:string" />
+    <wsdl:part name="receivedOn" type="s:string" />
+    <wsdl:part name="shipmentType" type="s:string" />
+    <wsdl:part name="deliverOnSaturday" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CalculateDayHttpGetOut">
+    <wsdl:part name="Body" element="tns:CalculateDayResult" />
+  </wsdl:message>
+  <wsdl:message name="EchoHttpGetIn">
+    <wsdl:part name="value" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EchoHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:portType name="JobServicesV2Soap">
+    <wsdl:operation name="Add3rdPartyShipper">
+      <wsdl:input message="tns:Add3rdPartyShipperSoapIn" />
+      <wsdl:output message="tns:Add3rdPartyShipperSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateClientVoucherJob">
+      <wsdl:input message="tns:CreateClientVoucherJobSoapIn" />
+      <wsdl:output message="tns:CreateClientVoucherJobSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateGroupedVoucherJob">
+      <wsdl:input message="tns:CreateGroupedVoucherJobSoapIn" />
+      <wsdl:output message="tns:CreateGroupedVoucherJobSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateReturnRequest">
+      <wsdl:input message="tns:CreateReturnRequestSoapIn" />
+      <wsdl:output message="tns:CreateReturnRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateVoucherReturnRequest">
+      <wsdl:input message="tns:CreateVoucherReturnRequestSoapIn" />
+      <wsdl:output message="tns:CreateVoucherReturnRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateReturnRequestParams">
+      <wsdl:input message="tns:UpdateReturnRequestParamsSoapIn" />
+      <wsdl:output message="tns:UpdateReturnRequestParamsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReturnRequest">
+      <wsdl:input message="tns:GetReturnRequestSoapIn" />
+      <wsdl:output message="tns:GetReturnRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReturnRequestOfVoucher">
+      <wsdl:input message="tns:GetReturnRequestOfVoucherSoapIn" />
+      <wsdl:output message="tns:GetReturnRequestOfVoucherSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReturnRequestPdf">
+      <wsdl:input message="tns:GetReturnRequestPdfSoapIn" />
+      <wsdl:output message="tns:GetReturnRequestPdfSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReturnRequestsPdf">
+      <wsdl:input message="tns:GetReturnRequestsPdfSoapIn" />
+      <wsdl:output message="tns:GetReturnRequestsPdfSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TrackDeliveryStatus">
+      <wsdl:input message="tns:TrackDeliveryStatusSoapIn" />
+      <wsdl:output message="tns:TrackDeliveryStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVoucherZPL">
+      <wsdl:input message="tns:GetVoucherZPLSoapIn" />
+      <wsdl:output message="tns:GetVoucherZPLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateCODRelease">
+      <wsdl:input message="tns:CreateCODReleaseSoapIn" />
+      <wsdl:output message="tns:CreateCODReleaseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Create3rdPartyShipper">
+      <wsdl:input message="tns:Create3rdPartyShipperSoapIn" />
+      <wsdl:output message="tns:Create3rdPartyShipperSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get3rdPartyShipper">
+      <wsdl:input message="tns:Get3rdPartyShipperSoapIn" />
+      <wsdl:output message="tns:Get3rdPartyShipperSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateVoucherPickupOrder">
+      <wsdl:input message="tns:CreateVoucherPickupOrderSoapIn" />
+      <wsdl:output message="tns:CreateVoucherPickupOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVoucherPickupOrder">
+      <wsdl:input message="tns:GetVoucherPickupOrderSoapIn" />
+      <wsdl:output message="tns:GetVoucherPickupOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVoucherPickupOrder">
+      <wsdl:input message="tns:UpdateVoucherPickupOrderSoapIn" />
+      <wsdl:output message="tns:UpdateVoucherPickupOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelVoucherPickupOrder">
+      <wsdl:input message="tns:CancelVoucherPickupOrderSoapIn" />
+      <wsdl:output message="tns:CancelVoucherPickupOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPickupJobStatus">
+      <wsdl:input message="tns:GetPickupJobStatusSoapIn" />
+      <wsdl:output message="tns:GetPickupJobStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateVoucherReturnOrder">
+      <wsdl:input message="tns:CreateVoucherReturnOrderSoapIn" />
+      <wsdl:output message="tns:CreateVoucherReturnOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVoucherReturnOrder">
+      <wsdl:input message="tns:GetVoucherReturnOrderSoapIn" />
+      <wsdl:output message="tns:GetVoucherReturnOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateAffiliateTrackingPair">
+      <wsdl:input message="tns:CreateAffiliateTrackingPairSoapIn" />
+      <wsdl:output message="tns:CreateAffiliateTrackingPairSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAffiliateTrackingPair">
+      <wsdl:input message="tns:GetAffiliateTrackingPairSoapIn" />
+      <wsdl:output message="tns:GetAffiliateTrackingPairSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLockersList">
+      <wsdl:input message="tns:GetLockersListSoapIn" />
+      <wsdl:output message="tns:GetLockersListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Authenticate">
+      <wsdl:input message="tns:AuthenticateSoapIn" />
+      <wsdl:output message="tns:AuthenticateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateJob">
+      <wsdl:input message="tns:CreateJobSoapIn" />
+      <wsdl:output message="tns:CreateJobSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddJobReport">
+      <wsdl:input message="tns:AddJobReportSoapIn" />
+      <wsdl:output message="tns:AddJobReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVoucherJob">
+      <wsdl:input message="tns:GetVoucherJobSoapIn" />
+      <wsdl:output message="tns:GetVoucherJobSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ClosePendingJobs">
+      <wsdl:input message="tns:ClosePendingJobsSoapIn" />
+      <wsdl:output message="tns:ClosePendingJobsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ClosePendingJobsByDate">
+      <wsdl:input message="tns:ClosePendingJobsByDateSoapIn" />
+      <wsdl:output message="tns:ClosePendingJobsByDateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelJob">
+      <wsdl:input message="tns:CancelJobSoapIn" />
+      <wsdl:output message="tns:CancelJobSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelAndCloseJob">
+      <wsdl:input message="tns:CancelAndCloseJobSoapIn" />
+      <wsdl:output message="tns:CancelAndCloseJobSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobsFromOrderId">
+      <wsdl:input message="tns:GetJobsFromOrderIdSoapIn" />
+      <wsdl:output message="tns:GetJobsFromOrderIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobs">
+      <wsdl:input message="tns:GetJobsSoapIn" />
+      <wsdl:output message="tns:GetJobsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TrackAndTrace">
+      <wsdl:input message="tns:TrackAndTraceSoapIn" />
+      <wsdl:output message="tns:TrackAndTraceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <wsdl:input message="tns:ChangePasswordSoapIn" />
+      <wsdl:output message="tns:ChangePasswordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVoucherPdf">
+      <wsdl:input message="tns:GetVoucherPdfSoapIn" />
+      <wsdl:output message="tns:GetVoucherPdfSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVouchersPdf">
+      <wsdl:input message="tns:GetVouchersPdfSoapIn" />
+      <wsdl:output message="tns:GetVouchersPdfSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddExtraInfo">
+      <wsdl:input message="tns:AddExtraInfoSoapIn" />
+      <wsdl:output message="tns:AddExtraInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShopsList">
+      <wsdl:input message="tns:GetShopsListSoapIn" />
+      <wsdl:output message="tns:GetShopsListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CalculateCost">
+      <wsdl:input message="tns:CalculateCostSoapIn" />
+      <wsdl:output message="tns:CalculateCostSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CalculateDay">
+      <wsdl:input message="tns:CalculateDaySoapIn" />
+      <wsdl:output message="tns:CalculateDaySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Helper">
+      <wsdl:input message="tns:HelperSoapIn" />
+      <wsdl:output message="tns:HelperSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Echo">
+      <wsdl:input message="tns:EchoSoapIn" />
+      <wsdl:output message="tns:EchoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="JobServicesV2HttpGet">
+    <wsdl:operation name="Add3rdPartyShipper">
+      <wsdl:input message="tns:Add3rdPartyShipperHttpGetIn" />
+      <wsdl:output message="tns:Add3rdPartyShipperHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateVoucherReturnRequest">
+      <wsdl:input message="tns:CreateVoucherReturnRequestHttpGetIn" />
+      <wsdl:output message="tns:CreateVoucherReturnRequestHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateReturnRequestParams">
+      <wsdl:input message="tns:UpdateReturnRequestParamsHttpGetIn" />
+      <wsdl:output message="tns:UpdateReturnRequestParamsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReturnRequest">
+      <wsdl:input message="tns:GetReturnRequestHttpGetIn" />
+      <wsdl:output message="tns:GetReturnRequestHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReturnRequestOfVoucher">
+      <wsdl:input message="tns:GetReturnRequestOfVoucherHttpGetIn" />
+      <wsdl:output message="tns:GetReturnRequestOfVoucherHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReturnRequestPdf">
+      <wsdl:input message="tns:GetReturnRequestPdfHttpGetIn" />
+      <wsdl:output message="tns:GetReturnRequestPdfHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReturnRequestsPdf">
+      <wsdl:input message="tns:GetReturnRequestsPdfHttpGetIn" />
+      <wsdl:output message="tns:GetReturnRequestsPdfHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TrackDeliveryStatus">
+      <wsdl:input message="tns:TrackDeliveryStatusHttpGetIn" />
+      <wsdl:output message="tns:TrackDeliveryStatusHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVoucherZPL">
+      <wsdl:input message="tns:GetVoucherZPLHttpGetIn" />
+      <wsdl:output message="tns:GetVoucherZPLHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateCODRelease">
+      <wsdl:input message="tns:CreateCODReleaseHttpGetIn" />
+      <wsdl:output message="tns:CreateCODReleaseHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get3rdPartyShipper">
+      <wsdl:input message="tns:Get3rdPartyShipperHttpGetIn" />
+      <wsdl:output message="tns:Get3rdPartyShipperHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateVoucherPickupOrder">
+      <wsdl:input message="tns:CreateVoucherPickupOrderHttpGetIn" />
+      <wsdl:output message="tns:CreateVoucherPickupOrderHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVoucherPickupOrder">
+      <wsdl:input message="tns:GetVoucherPickupOrderHttpGetIn" />
+      <wsdl:output message="tns:GetVoucherPickupOrderHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVoucherPickupOrder">
+      <wsdl:input message="tns:UpdateVoucherPickupOrderHttpGetIn" />
+      <wsdl:output message="tns:UpdateVoucherPickupOrderHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelVoucherPickupOrder">
+      <wsdl:input message="tns:CancelVoucherPickupOrderHttpGetIn" />
+      <wsdl:output message="tns:CancelVoucherPickupOrderHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPickupJobStatus">
+      <wsdl:input message="tns:GetPickupJobStatusHttpGetIn" />
+      <wsdl:output message="tns:GetPickupJobStatusHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateVoucherReturnOrder">
+      <wsdl:input message="tns:CreateVoucherReturnOrderHttpGetIn" />
+      <wsdl:output message="tns:CreateVoucherReturnOrderHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVoucherReturnOrder">
+      <wsdl:input message="tns:GetVoucherReturnOrderHttpGetIn" />
+      <wsdl:output message="tns:GetVoucherReturnOrderHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateAffiliateTrackingPair">
+      <wsdl:input message="tns:CreateAffiliateTrackingPairHttpGetIn" />
+      <wsdl:output message="tns:CreateAffiliateTrackingPairHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAffiliateTrackingPair">
+      <wsdl:input message="tns:GetAffiliateTrackingPairHttpGetIn" />
+      <wsdl:output message="tns:GetAffiliateTrackingPairHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLockersList">
+      <wsdl:input message="tns:GetLockersListHttpGetIn" />
+      <wsdl:output message="tns:GetLockersListHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Authenticate">
+      <wsdl:input message="tns:AuthenticateHttpGetIn" />
+      <wsdl:output message="tns:AuthenticateHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddJobReport">
+      <wsdl:input message="tns:AddJobReportHttpGetIn" />
+      <wsdl:output message="tns:AddJobReportHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVoucherJob">
+      <wsdl:input message="tns:GetVoucherJobHttpGetIn" />
+      <wsdl:output message="tns:GetVoucherJobHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ClosePendingJobs">
+      <wsdl:input message="tns:ClosePendingJobsHttpGetIn" />
+      <wsdl:output message="tns:ClosePendingJobsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ClosePendingJobsByDate">
+      <wsdl:input message="tns:ClosePendingJobsByDateHttpGetIn" />
+      <wsdl:output message="tns:ClosePendingJobsByDateHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelJob">
+      <wsdl:input message="tns:CancelJobHttpGetIn" />
+      <wsdl:output message="tns:CancelJobHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelAndCloseJob">
+      <wsdl:input message="tns:CancelAndCloseJobHttpGetIn" />
+      <wsdl:output message="tns:CancelAndCloseJobHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobsFromOrderId">
+      <wsdl:input message="tns:GetJobsFromOrderIdHttpGetIn" />
+      <wsdl:output message="tns:GetJobsFromOrderIdHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TrackAndTrace">
+      <wsdl:input message="tns:TrackAndTraceHttpGetIn" />
+      <wsdl:output message="tns:TrackAndTraceHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <wsdl:input message="tns:ChangePasswordHttpGetIn" />
+      <wsdl:output message="tns:ChangePasswordHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVoucherPdf">
+      <wsdl:input message="tns:GetVoucherPdfHttpGetIn" />
+      <wsdl:output message="tns:GetVoucherPdfHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVouchersPdf">
+      <wsdl:input message="tns:GetVouchersPdfHttpGetIn" />
+      <wsdl:output message="tns:GetVouchersPdfHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddExtraInfo">
+      <wsdl:input message="tns:AddExtraInfoHttpGetIn" />
+      <wsdl:output message="tns:AddExtraInfoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShopsList">
+      <wsdl:input message="tns:GetShopsListHttpGetIn" />
+      <wsdl:output message="tns:GetShopsListHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CalculateCost">
+      <wsdl:input message="tns:CalculateCostHttpGetIn" />
+      <wsdl:output message="tns:CalculateCostHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CalculateDay">
+      <wsdl:input message="tns:CalculateDayHttpGetIn" />
+      <wsdl:output message="tns:CalculateDayHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Echo">
+      <wsdl:input message="tns:EchoHttpGetIn" />
+      <wsdl:output message="tns:EchoHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="JobServicesV2Soap" type="tns:JobServicesV2Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Add3rdPartyShipper">
+      <soap:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/Add3rdPartyShipper" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateClientVoucherJob">
+      <soap:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/CreateClientVoucherJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateGroupedVoucherJob">
+      <soap:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/CreateGroupedVoucherJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateReturnRequest">
+      <soap:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/CreateReturnRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateVoucherReturnRequest">
+      <soap:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/CreateVoucherReturnRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateReturnRequestParams">
+      <soap:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/UpdateReturnRequestParams" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReturnRequest">
+      <soap:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/GetReturnRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReturnRequestOfVoucher">
+      <soap:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/GetReturnRequestOfVoucher" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReturnRequestPdf">
+      <soap:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/GetReturnRequestPdf" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReturnRequestsPdf">
+      <soap:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/GetReturnRequestsPdf" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TrackDeliveryStatus">
+      <soap:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/TrackDeliveryStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVoucherZPL">
+      <soap:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/GetVoucherZPL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateCODRelease">
+      <soap:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/CreateCODRelease" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Create3rdPartyShipper">
+      <soap:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/Create3rdPartyShipper" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get3rdPartyShipper">
+      <soap:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/Get3rdPartyShipper" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateVoucherPickupOrder">
+      <soap:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/CreateVoucherPickupOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVoucherPickupOrder">
+      <soap:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/GetVoucherPickupOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVoucherPickupOrder">
+      <soap:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/UpdateVoucherPickupOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelVoucherPickupOrder">
+      <soap:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/CancelVoucherPickupOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPickupJobStatus">
+      <soap:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/GetPickupJobStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateVoucherReturnOrder">
+      <soap:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/CreateVoucherReturnOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVoucherReturnOrder">
+      <soap:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/GetVoucherReturnOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAffiliateTrackingPair">
+      <soap:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/CreateAffiliateTrackingPair" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAffiliateTrackingPair">
+      <soap:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/GetAffiliateTrackingPair" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLockersList">
+      <soap:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/GetLockersList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Authenticate">
+      <soap:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/Authenticate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateJob">
+      <soap:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/CreateJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddJobReport">
+      <soap:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/AddJobReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVoucherJob">
+      <soap:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/GetVoucherJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClosePendingJobs">
+      <soap:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/ClosePendingJobs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClosePendingJobsByDate">
+      <soap:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/ClosePendingJobsByDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelJob">
+      <soap:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/CancelJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelAndCloseJob">
+      <soap:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/CancelAndCloseJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobsFromOrderId">
+      <soap:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/GetJobsFromOrderId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobs">
+      <soap:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/GetJobs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TrackAndTrace">
+      <soap:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/TrackAndTrace" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <soap:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/ChangePassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVoucherPdf">
+      <soap:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/GetVoucherPdf" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVouchersPdf">
+      <soap:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/GetVouchersPdf" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddExtraInfo">
+      <soap:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/AddExtraInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShopsList">
+      <soap:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/GetShopsList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculateCost">
+      <soap:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/CalculateCost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculateDay">
+      <soap:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/CalculateDay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Helper">
+      <soap:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/Helper" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Echo">
+      <soap:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/Echo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="JobServicesV2Soap12" type="tns:JobServicesV2Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Add3rdPartyShipper">
+      <soap12:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/Add3rdPartyShipper" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateClientVoucherJob">
+      <soap12:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/CreateClientVoucherJob" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateGroupedVoucherJob">
+      <soap12:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/CreateGroupedVoucherJob" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateReturnRequest">
+      <soap12:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/CreateReturnRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateVoucherReturnRequest">
+      <soap12:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/CreateVoucherReturnRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateReturnRequestParams">
+      <soap12:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/UpdateReturnRequestParams" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReturnRequest">
+      <soap12:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/GetReturnRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReturnRequestOfVoucher">
+      <soap12:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/GetReturnRequestOfVoucher" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReturnRequestPdf">
+      <soap12:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/GetReturnRequestPdf" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReturnRequestsPdf">
+      <soap12:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/GetReturnRequestsPdf" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TrackDeliveryStatus">
+      <soap12:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/TrackDeliveryStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVoucherZPL">
+      <soap12:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/GetVoucherZPL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateCODRelease">
+      <soap12:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/CreateCODRelease" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Create3rdPartyShipper">
+      <soap12:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/Create3rdPartyShipper" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get3rdPartyShipper">
+      <soap12:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/Get3rdPartyShipper" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateVoucherPickupOrder">
+      <soap12:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/CreateVoucherPickupOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVoucherPickupOrder">
+      <soap12:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/GetVoucherPickupOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVoucherPickupOrder">
+      <soap12:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/UpdateVoucherPickupOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelVoucherPickupOrder">
+      <soap12:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/CancelVoucherPickupOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPickupJobStatus">
+      <soap12:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/GetPickupJobStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateVoucherReturnOrder">
+      <soap12:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/CreateVoucherReturnOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVoucherReturnOrder">
+      <soap12:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/GetVoucherReturnOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAffiliateTrackingPair">
+      <soap12:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/CreateAffiliateTrackingPair" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAffiliateTrackingPair">
+      <soap12:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/GetAffiliateTrackingPair" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLockersList">
+      <soap12:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/GetLockersList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Authenticate">
+      <soap12:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/Authenticate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateJob">
+      <soap12:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/CreateJob" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddJobReport">
+      <soap12:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/AddJobReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVoucherJob">
+      <soap12:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/GetVoucherJob" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClosePendingJobs">
+      <soap12:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/ClosePendingJobs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClosePendingJobsByDate">
+      <soap12:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/ClosePendingJobsByDate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelJob">
+      <soap12:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/CancelJob" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelAndCloseJob">
+      <soap12:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/CancelAndCloseJob" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobsFromOrderId">
+      <soap12:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/GetJobsFromOrderId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobs">
+      <soap12:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/GetJobs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TrackAndTrace">
+      <soap12:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/TrackAndTrace" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <soap12:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/ChangePassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVoucherPdf">
+      <soap12:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/GetVoucherPdf" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVouchersPdf">
+      <soap12:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/GetVouchersPdf" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddExtraInfo">
+      <soap12:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/AddExtraInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShopsList">
+      <soap12:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/GetShopsList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculateCost">
+      <soap12:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/CalculateCost" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculateDay">
+      <soap12:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/CalculateDay" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Helper">
+      <soap12:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/Helper" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Echo">
+      <soap12:operation soapAction="http://voucher.taxydromiki.gr/JobServicesV2.asmx/Echo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="JobServicesV2HttpGet" type="tns:JobServicesV2HttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="Add3rdPartyShipper">
+      <http:operation location="/Add3rdPartyShipper" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateVoucherReturnRequest">
+      <http:operation location="/CreateVoucherReturnRequest" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateReturnRequestParams">
+      <http:operation location="/UpdateReturnRequestParams" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReturnRequest">
+      <http:operation location="/GetReturnRequest" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReturnRequestOfVoucher">
+      <http:operation location="/GetReturnRequestOfVoucher" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReturnRequestPdf">
+      <http:operation location="/GetReturnRequestPdf" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetReturnRequestsPdf">
+      <http:operation location="/GetReturnRequestsPdf" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="TrackDeliveryStatus">
+      <http:operation location="/TrackDeliveryStatus" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVoucherZPL">
+      <http:operation location="/GetVoucherZPL" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="CreateCODRelease">
+      <http:operation location="/CreateCODRelease" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get3rdPartyShipper">
+      <http:operation location="/Get3rdPartyShipper" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateVoucherPickupOrder">
+      <http:operation location="/CreateVoucherPickupOrder" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVoucherPickupOrder">
+      <http:operation location="/GetVoucherPickupOrder" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVoucherPickupOrder">
+      <http:operation location="/UpdateVoucherPickupOrder" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelVoucherPickupOrder">
+      <http:operation location="/CancelVoucherPickupOrder" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPickupJobStatus">
+      <http:operation location="/GetPickupJobStatus" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateVoucherReturnOrder">
+      <http:operation location="/CreateVoucherReturnOrder" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVoucherReturnOrder">
+      <http:operation location="/GetVoucherReturnOrder" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAffiliateTrackingPair">
+      <http:operation location="/CreateAffiliateTrackingPair" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAffiliateTrackingPair">
+      <http:operation location="/GetAffiliateTrackingPair" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLockersList">
+      <http:operation location="/GetLockersList" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Authenticate">
+      <http:operation location="/Authenticate" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddJobReport">
+      <http:operation location="/AddJobReport" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVoucherJob">
+      <http:operation location="/GetVoucherJob" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClosePendingJobs">
+      <http:operation location="/ClosePendingJobs" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClosePendingJobsByDate">
+      <http:operation location="/ClosePendingJobsByDate" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelJob">
+      <http:operation location="/CancelJob" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelAndCloseJob">
+      <http:operation location="/CancelAndCloseJob" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobsFromOrderId">
+      <http:operation location="/GetJobsFromOrderId" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TrackAndTrace">
+      <http:operation location="/TrackAndTrace" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <http:operation location="/ChangePassword" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVoucherPdf">
+      <http:operation location="/GetVoucherPdf" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetVouchersPdf">
+      <http:operation location="/GetVouchersPdf" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="AddExtraInfo">
+      <http:operation location="/AddExtraInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShopsList">
+      <http:operation location="/GetShopsList" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculateCost">
+      <http:operation location="/CalculateCost" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculateDay">
+      <http:operation location="/CalculateDay" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Echo">
+      <http:operation location="/Echo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="JobServicesV2">
+    <wsdl:port name="JobServicesV2Soap" binding="tns:JobServicesV2Soap">
+      <soap:address location="https://voucher.taxydromiki.gr/JobServicesV2.asmx" />
+    </wsdl:port>
+    <wsdl:port name="JobServicesV2Soap12" binding="tns:JobServicesV2Soap12">
+      <soap12:address location="https://voucher.taxydromiki.gr/JobServicesV2.asmx" />
+    </wsdl:port>
+    <wsdl:port name="JobServicesV2HttpGet" binding="tns:JobServicesV2HttpGet">
+      <http:address location="https://voucher.taxydromiki.gr/JobServicesV2.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
